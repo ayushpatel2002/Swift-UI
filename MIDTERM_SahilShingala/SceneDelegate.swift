@@ -4,26 +4,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        print("[AppDelegate] didFinishLaunching")
+    func scene(_ scene: UIScene,
+               willConnectTo session: UISceneSession,
+               options connectionOptions: UIScene.ConnectionOptions) {
+        guard let windowScene = scene as? UIWindowScene else { return }
 
-        // Fallback: if scenes are not configured, manually create a window so the app is visible.
-        if window == nil {
-            window = UIWindow(frame: UIScreen.main.bounds)
-            let root = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() ?? UIViewController()
-            root.view.backgroundColor = .systemBackground
-            window?.rootViewController = root
-            window?.makeKeyAndVisible()
-            print("[AppDelegate] Fallback window shown")
+        let window = UIWindow(windowScene: windowScene)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+        guard let initialViewController = storyboard.instantiateInitialViewController() else {
+            assertionFailure("Expected an initial view controller in Main.storyboard")
+            return
         }
-        return true
-    }
 
-    func application(_ application: UIApplication,
-                     configurationForConnecting connectingSceneSession: UISceneSession,
-                     options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
+        if initialViewController.view.backgroundColor == nil {
+            initialViewController.view.backgroundColor = .systemBackground
+        }
 
+        window.rootViewController = initialViewController
+        window.makeKeyAndVisible()
+        self.window = window
+    }
 }
