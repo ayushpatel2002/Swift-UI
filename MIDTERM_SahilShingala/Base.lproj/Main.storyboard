@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NAV1">
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="LOGIN-SCENE">
+            <objects>
+                <viewController id="LOGIN-VC" customClass="LoginViewController" customModule="MIDTERM_SahilShingala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="LOGIN-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="LOGIN-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LOGIN-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1200" y="0.0"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="TAB-SCENE">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBar" id="TAB-VC" customClass="TabBarController" customModule="MIDTERM_SahilShingala" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TAB-BAR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="NAV1" kind="relationship" relationship="viewControllers" id="rel1"/>
+                        <segue destination="NAV2" kind="relationship" relationship="viewControllers" id="rel2"/>
+                        <segue destination="NAV3" kind="relationship" relationship="viewControllers" id="rel3"/>
+                        <segue destination="NAV4" kind="relationship" relationship="viewControllers" id="rel4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAB-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="NAV1-SCENE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NAV1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="TB1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NAV1-BAR">
+                        <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PROF-VC" kind="relationship" relationship="rootViewController" id="root1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAV1-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="-400"/>
+        </scene>
+        <!--To-Do-->
+        <scene sceneID="NAV2-SCENE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NAV2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="To-Do" id="TB2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NAV2-BAR">
+                        <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TODO-VC" kind="relationship" relationship="rootViewController" id="root2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAV2-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="-100"/>
+        </scene>
+        <!--Finance-->
+        <scene sceneID="NAV3-SCENE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NAV3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Finance" id="TB3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NAV3-BAR">
+                        <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FIN-VC" kind="relationship" relationship="rootViewController" id="root3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAV3-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="200"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="NAV4-SCENE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NAV4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notes" id="TB4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NAV4-BAR">
+                        <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NOTES-VC" kind="relationship" relationship="rootViewController" id="root4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAV4-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="500"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="PROF-SCENE">
+            <objects>
+                <viewController id="PROF-VC" customClass="ProfileViewController" customModule="MIDTERM_SahilShingala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PROF-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PNAME">
+                                <rect key="frame" x="20" y="240" width="400" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pname-h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PAGE">
+                                <rect key="frame" x="20" y="290" width="400" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="page-h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBTN">
+                                <rect key="frame" x="20" y="350" width="400" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="pbtn-h"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show"/>
+                                <connections>
+                                    <action selector="go:" destination="PROF-VC" eventType="touchUpInside" id="PBTNACT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PROF-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PNAME" firstAttribute="top" secondItem="PROF-SAFE" secondAttribute="top" constant="62" id="c1"/>
+                            <constraint firstItem="PNAME" firstAttribute="leading" secondItem="PROF-SAFE" secondAttribute="leading" constant="20" id="c2"/>
+                            <constraint firstItem="PROF-SAFE" firstAttribute="trailing" secondItem="PNAME" secondAttribute="trailing" constant="20" id="c3"/>
+                            <constraint firstItem="PAGE" firstAttribute="top" secondItem="PNAME" secondAttribute="bottom" constant="10" id="c4"/>
+                            <constraint firstItem="PAGE" firstAttribute="leading" secondItem="PROF-SAFE" secondAttribute="leading" constant="20" id="c5"/>
+                            <constraint firstItem="PROF-SAFE" firstAttribute="trailing" secondItem="PAGE" secondAttribute="trailing" constant="20" id="c6"/>
+                            <constraint firstItem="PBTN" firstAttribute="top" secondItem="PAGE" secondAttribute="bottom" constant="20" id="c7"/>
+                            <constraint firstItem="PBTN" firstAttribute="leading" secondItem="PROF-SAFE" secondAttribute="leading" constant="20" id="c8"/>
+                            <constraint firstItem="PROF-SAFE" firstAttribute="trailing" secondItem="PBTN" secondAttribute="trailing" constant="20" id="c9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="PROF-NAV"/>
+                    <connections>
+                        <outlet property="txtAge" destination="PAGE" id="PROF-out2"/>
+                        <outlet property="txtName" destination="PNAME" id="PROF-out1"/>
+                        <segue destination="PROF-DETAIL-VC" kind="show" identifier="toProfileDetail" id="PROF-segue"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PROF-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="-400"/>
+        </scene>
+        <!--Profile Detail-->
+        <scene sceneID="PROF-DETAIL-SCENE">
+            <objects>
+                <viewController id="PROF-DETAIL-VC" customClass="ProfileDetailViewController" customModule="MIDTERM_SahilShingala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PROF-DETAIL-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLBL">
+                                <rect key="frame" x="20" y="240" width="400" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PROF-DETAIL-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PLBL" firstAttribute="top" secondItem="PROF-DETAIL-SAFE" secondAttribute="top" constant="62" id="pc1"/>
+                            <constraint firstItem="PLBL" firstAttribute="leading" secondItem="PROF-DETAIL-SAFE" secondAttribute="leading" constant="20" id="pc2"/>
+                            <constraint firstItem="PROF-DETAIL-SAFE" firstAttribute="trailing" secondItem="PLBL" secondAttribute="trailing" constant="20" id="pc3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile Detail" id="PROF-DETAIL-NAV"/>
+                    <connections>
+                        <outlet property="lbl" destination="PLBL" id="PROF-DETAIL-out1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PROF-DETAIL-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400" y="-400"/>
+        </scene>
+        <!--To-Do-->
+        <scene sceneID="TODO-SCENE">
+            <objects>
+                <viewController id="TODO-VC" customClass="TodoViewController" customModule="MIDTERM_SahilShingala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TODO-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TTASK">
+                                <rect key="frame" x="20" y="240" width="400" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ttask-h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Priority" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPRIO">
+                                <rect key="frame" x="20" y="290" width="400" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tprio-h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBTN">
+                                <rect key="frame" x="20" y="350" width="400" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tbtn-h"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show"/>
+                                <connections>
+                                    <action selector="go:" destination="TODO-VC" eventType="touchUpInside" id="TBTNACT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TODO-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TTASK" firstAttribute="top" secondItem="TODO-SAFE" secondAttribute="top" constant="62" id="tc1"/>
+                            <constraint firstItem="TTASK" firstAttribute="leading" secondItem="TODO-SAFE" secondAttribute="leading" constant="20" id="tc2"/>
+                            <constraint firstItem="TODO-SAFE" firstAttribute="trailing" secondItem="TTASK" secondAttribute="trailing" constant="20" id="tc3"/>
+                            <constraint firstItem="TPRIO" firstAttribute="top" secondItem="TTASK" secondAttribute="bottom" constant="10" id="tc4"/>
+                            <constraint firstItem="TPRIO" firstAttribute="leading" secondItem="TODO-SAFE" secondAttribute="leading" constant="20" id="tc5"/>
+                            <constraint firstItem="TODO-SAFE" firstAttribute="trailing" secondItem="TPRIO" secondAttribute="trailing" constant="20" id="tc6"/>
+                            <constraint firstItem="TBTN" firstAttribute="top" secondItem="TPRIO" secondAttribute="bottom" constant="20" id="tc7"/>
+                            <constraint firstItem="TBTN" firstAttribute="leading" secondItem="TODO-SAFE" secondAttribute="leading" constant="20" id="tc8"/>
+                            <constraint firstItem="TODO-SAFE" firstAttribute="trailing" secondItem="TBTN" secondAttribute="trailing" constant="20" id="tc9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="To-Do" id="TODO-NAV"/>
+                    <connections>
+                        <outlet property="txtPriority" destination="TPRIO" id="TODO-out2"/>
+                        <outlet property="txtTask" destination="TTASK" id="TODO-out1"/>
+                        <segue destination="TODO-DETAIL-VC" kind="show" identifier="toTaskDetail" id="TODO-segue"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TODO-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="-100"/>
+        </scene>
+        <!--To-Do Detail-->
+        <scene sceneID="TODO-DETAIL-SCENE">
+            <objects>
+                <viewController id="TODO-DETAIL-VC" customClass="TodoDetailViewController" customModule="MIDTERM_SahilShingala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TODO-DETAIL-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLBL">
+                                <rect key="frame" x="20" y="240" width="400" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TODO-DETAIL-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TLBL" firstAttribute="top" secondItem="TODO-DETAIL-SAFE" secondAttribute="top" constant="62" id="tc10"/>
+                            <constraint firstItem="TLBL" firstAttribute="leading" secondItem="TODO-DETAIL-SAFE" secondAttribute="leading" constant="20" id="tc11"/>
+                            <constraint firstItem="TODO-DETAIL-SAFE" firstAttribute="trailing" secondItem="TLBL" secondAttribute="trailing" constant="20" id="tc12"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="To-Do Detail" id="TODO-DETAIL-NAV"/>
+                    <connections>
+                        <outlet property="lbl" destination="TLBL" id="TODO-DETAIL-out1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TODO-DETAIL-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400" y="-100"/>
+        </scene>
+        <!--Finance-->
+        <scene sceneID="FIN-SCENE">
+            <objects>
+                <viewController id="FIN-VC" customClass="FinanceViewController" customModule="MIDTERM_SahilShingala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FIN-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Income" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FININC">
+                                <rect key="frame" x="20" y="240" width="400" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="finc-h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expense" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FINEXP">
+                                <rect key="frame" x="20" y="290" width="400" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fexp-h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBTN">
+                                <rect key="frame" x="20" y="350" width="400" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="fbtn-h"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show"/>
+                                <connections>
+                                    <action selector="go:" destination="FIN-VC" eventType="touchUpInside" id="FBTNACT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FIN-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FININC" firstAttribute="top" secondItem="FIN-SAFE" secondAttribute="top" constant="62" id="fc1"/>
+                            <constraint firstItem="FININC" firstAttribute="leading" secondItem="FIN-SAFE" secondAttribute="leading" constant="20" id="fc2"/>
+                            <constraint firstItem="FIN-SAFE" firstAttribute="trailing" secondItem="FININC" secondAttribute="trailing" constant="20" id="fc3"/>
+                            <constraint firstItem="FINEXP" firstAttribute="top" secondItem="FININC" secondAttribute="bottom" constant="10" id="fc4"/>
+                            <constraint firstItem="FINEXP" firstAttribute="leading" secondItem="FIN-SAFE" secondAttribute="leading" constant="20" id="fc5"/>
+                            <constraint firstItem="FIN-SAFE" firstAttribute="trailing" secondItem="FINEXP" secondAttribute="trailing" constant="20" id="fc6"/>
+                            <constraint firstItem="FBTN" firstAttribute="top" secondItem="FINEXP" secondAttribute="bottom" constant="20" id="fc7"/>
+                            <constraint firstItem="FBTN" firstAttribute="leading" secondItem="FIN-SAFE" secondAttribute="leading" constant="20" id="fc8"/>
+                            <constraint firstItem="FIN-SAFE" firstAttribute="trailing" secondItem="FBTN" secondAttribute="trailing" constant="20" id="fc9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Finance" id="FIN-NAV"/>
+                    <connections>
+                        <outlet property="txtExpense" destination="FINEXP" id="FIN-out2"/>
+                        <outlet property="txtIncome" destination="FININC" id="FIN-out1"/>
+                        <segue destination="FIN-DETAIL-VC" kind="show" identifier="toFinanceSummary" id="FIN-segue"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIN-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="200"/>
+        </scene>
+        <!--Finance Summary-->
+        <scene sceneID="FIN-DETAIL-SCENE">
+            <objects>
+                <viewController id="FIN-DETAIL-VC" customClass="FinanceSummaryViewController" customModule="MIDTERM_SahilShingala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FIN-DETAIL-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLBL">
+                                <rect key="frame" x="20" y="240" width="400" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FIN-DETAIL-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FLBL" firstAttribute="top" secondItem="FIN-DETAIL-SAFE" secondAttribute="top" constant="62" id="fc10"/>
+                            <constraint firstItem="FLBL" firstAttribute="leading" secondItem="FIN-DETAIL-SAFE" secondAttribute="leading" constant="20" id="fc11"/>
+                            <constraint firstItem="FIN-DETAIL-SAFE" firstAttribute="trailing" secondItem="FLBL" secondAttribute="trailing" constant="20" id="fc12"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Finance Summary" id="FIN-DETAIL-NAV"/>
+                    <connections>
+                        <outlet property="lbl" destination="FLBL" id="FIN-DETAIL-out1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIN-DETAIL-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400" y="200"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="NOTES-SCENE">
+            <objects>
+                <viewController id="NOTES-VC" customClass="NotesViewController" customModule="MIDTERM_SahilShingala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NOTES-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NTXT">
+                                <rect key="frame" x="20" y="240" width="400" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ntxt-h"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBUTTON">
+                                <rect key="frame" x="20" y="450" width="400" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="nbtn-h"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show"/>
+                                <connections>
+                                    <action selector="go:" destination="NOTES-VC" eventType="touchUpInside" id="NBTNACT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NOTES-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NTXT" firstAttribute="top" secondItem="NOTES-SAFE" secondAttribute="top" constant="62" id="nc1"/>
+                            <constraint firstItem="NTXT" firstAttribute="leading" secondItem="NOTES-SAFE" secondAttribute="leading" constant="20" id="nc2"/>
+                            <constraint firstItem="NOTES-SAFE" firstAttribute="trailing" secondItem="NTXT" secondAttribute="trailing" constant="20" id="nc3"/>
+                            <constraint firstItem="NBUTTON" firstAttribute="top" secondItem="NTXT" secondAttribute="bottom" constant="10" id="nc4"/>
+                            <constraint firstItem="NBUTTON" firstAttribute="leading" secondItem="NOTES-SAFE" secondAttribute="leading" constant="20" id="nc5"/>
+                            <constraint firstItem="NOTES-SAFE" firstAttribute="trailing" secondItem="NBUTTON" secondAttribute="trailing" constant="20" id="nc6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notes" id="NOTES-NAV"/>
+                    <connections>
+                        <outlet property="txtNote" destination="NTXT" id="NOTES-out1"/>
+                        <segue destination="NOTES-DETAIL-VC" kind="show" identifier="toNoteDetail" id="NOTES-segue"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NOTES-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="500"/>
+        </scene>
+        <!--Notes Detail-->
+        <scene sceneID="NOTES-DETAIL-SCENE">
+            <objects>
+                <viewController id="NOTES-DETAIL-VC" customClass="NotesDetailViewController" customModule="MIDTERM_SahilShingala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NOTES-DETAIL-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLBL">
+                                <rect key="frame" x="20" y="240" width="400" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NOTES-DETAIL-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NLBL" firstAttribute="top" secondItem="NOTES-DETAIL-SAFE" secondAttribute="top" constant="62" id="nc7"/>
+                            <constraint firstItem="NLBL" firstAttribute="leading" secondItem="NOTES-DETAIL-SAFE" secondAttribute="leading" constant="20" id="nc8"/>
+                            <constraint firstItem="NOTES-DETAIL-SAFE" firstAttribute="trailing" secondItem="NLBL" secondAttribute="trailing" constant="20" id="nc9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notes Detail" id="NOTES-DETAIL-NAV"/>
+                    <connections>
+                        <outlet property="lbl" destination="NLBL" id="NOTES-DETAIL-out1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NOTES-DETAIL-FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400" y="500"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
