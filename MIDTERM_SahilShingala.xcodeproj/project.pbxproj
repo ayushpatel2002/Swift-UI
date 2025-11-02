@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3F9F7D2F4A4B1E8FBC6CC1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3F9F7C2F4A4B1E8FBC6CC1 /* Accelerate.framework */; };
 		2E4B56A42BDF41139AF86955 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9052B34B0FD3440E877BED62 /* AppDelegate.swift */; };
 		691ACC6632C542D5868B64A9 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA50E650F3449A8F080B30 /* ProfileDetailViewController.swift */; };
 		6DD9A72D3A5B43B8B9EC41F8 /* NotesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A21465433E6405685F564BE /* NotesDetailViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3F9F7C2F4A4B1E8FBC6CC1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		047EACCB19D64C47A3E0760A /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		23BA50E650F3449A8F080B30 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		3D0D633F79B743CAA4D6BC58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+                                1A3F9F7D2F4A4B1E8FBC6CC1 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +76,7 @@
 		B3D61A14D6D641AD8686DBAE /* MIDTERM_SahilShingala */ = {
 			isa = PBXGroup;
 			children = (
+				1A3F9F7C2F4A4B1E8FBC6CC1 /* Accelerate.framework */,
 				9052B34B0FD3440E877BED62 /* AppDelegate.swift */,
 				54C8239D5C134CF1AC8B4A1F /* SceneDelegate.swift */,
 				9D5F230B6E8E432A875CDBDF /* Main.storyboard */,
