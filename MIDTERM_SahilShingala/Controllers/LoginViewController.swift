@@ -1,5 +1,6 @@
 import UIKit
 import FBSDKLoginKit
+import FBSDKCoreKit
 
 class LoginViewController: UIViewController, LoginButtonDelegate {
     override func viewDidLoad() {
@@ -15,12 +16,36 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
             b.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard AccessToken.current != nil else { return }
+        transitionToMainInterface(animated: false)
+    }
+
+    private func transitionToMainInterface(animated: Bool) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let tabBar = storyboard.instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController else { return }
+        tabBar.modalPresentationStyle = .fullScreen
+
+        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+            window.rootViewController = tabBar
+            if animated {
+                UIView.transition(with: window,
+                                  duration: 0.3,
+                                  options: [.transitionFlipFromRight],
+                                  animations: nil,
+                                  completion: nil)
+            }
+            return
+        }
+
+        present(tabBar, animated: animated)
+    }
+
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
         if error == nil, let r = result, !r.isCancelled {
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "MainTabBar")
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true)
+            transitionToMainInterface(animated: true)
         }
     }
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {}
